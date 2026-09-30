@@ -1,3 +1,4 @@
+Index.html
 # MR.COFFEE - Website Cafe & Online Ordering
 
 Proyek web sederhana untuk sistem informasi dan pemesanan menu secara *online* di cafe **MR.COFFEE**. Dibuat menggunakan HTML, CSS, dan JavaScript murni (Vanilla JS) sebagai bagian dari tugas/portofolio pemrograman web dasar.
@@ -55,4 +56,59 @@ Proyek ini membantu saya memahami konsep dasar *front-end development*, antara l
 3. Pengelolaan *form input* dan logika kalkulasi harga secara langsung di sisi klien (*client-side*).
 
 ---
-*Dikembangkan oleh [Nama Kamu] - [Nama Universitas/Jurusan]*
+Dikembangkan oleh [Marselino Sanjaya] - [Binus University/Computer Science]
+
+
+
+Test.py
+# Sistem Perpustakaan Digital (Python & SQLite)
+
+Proyek ini adalah aplikasi Manajemen Perpustakaan sederhana berbasis *Command Line Interface* (CLI) yang dibuat menggunakan **Python** dan **Database SQLite**.
+
+Aplikasi ini dirancang untuk mengelola ketersediaan buku, transaksi peminjaman dengan aturan durasi, serta simulasi integrasi layanan pembelian buku melalui API Pihak Ke-3.
+
+---
+
+## 🛠️ Fitur Utama
+
+1. **Lihat Daftar Buku**: Menampilkan seluruh data buku dan jumlah stok yang tersimpan di database.
+2. **Cari Buku**: Mencari buku berdasarkan kata kunci judul.
+3. **Tambah Buku Baru (Admin)**: Memasukkan data buku dan stok baru secara langsung ke database SQLite.
+4. **Pinjam Buku (Anggota)**: 
+   * Memproses peminjaman buku dan mengupdate stok secara otomatis.
+   * **Aturan Bisnis**: Peminjaman maksimal **7 hari (1 minggu)**. Peminjaman di atas 7 hari akan ditolak oleh sistem.
+5. **Fitur Beli Buku (API Pihak Ke-3)**: Simulasi panggilan *API Gateway* eksternal (Status: `503 Service Unavailable / In Development`).
+
+---
+
+## 👥 Aktor Sistem & Hak Akses
+
+* **Anggota / Mahasiswa**: Dapat melihat daftar buku, mencari buku, dan meminjam buku.
+* **Admin Perpustakaan**: Dapat menginput/menambah buku baru ke dalam database.
+* **API Gateway (Pihak Ke-3)**: Layanan luar untuk penanganan pembelian buku baru.
+
+---
+
+## 🗄️ Struktur Database (`perpustakaan.db`)
+
+Sistem menggunakan database lokal **SQLite** dengan tabel utama `buku`:
+
+| Nama Kolom | Tipe Data | Keterangan |
+| :--- | :--- | :--- |
+| `id` | INTEGER | ID Unik Buku (Primary Key, Auto Increment) |
+| `judul` | TEXT | Judul Buku |
+| `penulis` | TEXT | Nama Penulis Buku |
+| `stok` | INTEGER | Jumlah Stok Buku Tersedia |
+
+---
+
+## 🚀 Cara Menjalankan Program (VS Code)
+
+1. Pastikan **Python 3.x** sudah terinstall di komputer.
+2. Buka folder proyek di **VS Code**.
+3. Jalankan program melalui terminal:
+   ```bash
+   python Test.py
+
+
+
