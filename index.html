@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MR.COFFEE</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>MR.COFFEE</h1>
+    <nav>
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('rewards'); tampilkanRewards();">Rewards</button>
+      <button onclick="showPage('about')">About Us</button>
+      <button onclick="showPage('menu')">Menu</button>
+      <button onclick="showPage('pesan')">Pemesanan</button>
+    </nav>
+  </header>
+
+  
+  
+
+  <div class="container page" id="home">
+    <img src="Logonew.jpg" alt="LOGO MR.COFFEE" class="logo-img">
+    <h3 class="center-text">Pesanan Terbanyak</h3>
+    <img src="Cromboloni23.jpg" alt="Rewards MR.COFFEE" class="Rewards-img">
+    <img src="shutterstock_223511062.jpg" alt="Best MR.COFFEE" class="Best-img">
+    <img src="ilan.jpp" alt="Best MR.COFFEE" class="Best-img">
+    <img src="Teh-Tarik-Cincau-tokomesin1.jpg" alt="Best MR.COFFEE" class="Best-img">
+    <img src="jusmelon.jpg" alt="best MR.COFFEE" class="best-img">
+
+    <div id="menu-terbanyak" class="menu-list"></div>
+
+    <img src="ilan.jpg" alt="Rewards MR.COFFEE" class="Rewards-img">
+    <p class="center-text">Diskon Spesial Tiap Rabu! Dapatkan <strong>Diskon</strong> 25% untuk pembelian Ice Latte!</p>
+    <button onclick="showPage('rewards'); tampilkanRewards();" class="center-button">Lihat Rewards</button>
+
+    <img src="SusantoLimian.jpg" class="Foto-img" alt="CEO">
+    <p class="center-text"><strong>Susanto Liman</strong></p>
+    <p class="center-text">
+      Inspirasi berdirinya Mr.Coffee datang dari lubuk hati saya paling dalam, kecintaan terhadap kopi serta ingin memberikan
+      kesan yang unik terhadap setiap pengunjung
+    </p>
+    <button onclick="showPage('about')" class="center-button">Lihat About Us</button>
+  </div>
+
+  <section class="page" id="menu" style="display:none;">
+    <h2 class="center-text">Menu</h2>
+    <div id="menu-cart-container">
+      <nav class="center-button">
+        <button onclick="filterMenu('all')">Semua</button>
+        <button onclick="filterMenu('kopi')">Kopi</button>
+        <button onclick="filterMenu('jus')">Jus</button>
+        <button onclick="filterMenu('coklat')">Coklat</button>
+        <button onclick="filterMenu('snack')">Snack</button>
+        <button onclick="filterMenu('teh')">Teh</button>
+      </nav>
+      <main id="menu-list"></main>
+    </div>
+  </section>
+
+  <section class="page" id="rewards" style="display:none;">
+    <h2>Rewards</h2>
+    <div class="download-section center-text">
+      <h3>Download Aplikasi MR.COFFEE</h3>
+      <button onclick="window.open('https://play.google.com/', '_blank')">Play Store</button>
+      <button onclick="window.open('https://www.apple.com/app-store/', '_blank')">App Store</button>
+    </div>
+    <div id="reward-list" class="menu-list"></div>
+  </section>
+
+  <section class="page" id="about" style="display:none;">
+    <h2>About Us</h2>
+    <img src="SusantoLimian.jpg" alt="CEO MR.COFFEE" class="ceo-img" />
+    <p><strong>Nama:</strong> Susanto Liman</p>
+    <p><strong>Visi:</strong> Menjadikan Mr.COFFEE tempat yang penuh canda tawa dan nyaman untuk menyalurkan isi hati.</p>
+    <p><strong>Misi:</strong> Kepuasan pelanggan membangunkan interaksi antara para pengunjung dan biji kopi berasal dari petani lokal.</p>
+    <p><strong>Cerita Berdiri:</strong> Keinginan berbagi kebahagiaan dengan secangkir kopi, karena setiap pengunjung punya cerita sendiri.</p>
+  </section>
+
+  <section class="page" id="pesan" style="display:none;">
+    <h2>Pemesanan Menu</h2>
+    <ul id="keranjang"></ul>
+    <p><strong>Total:</strong> <span id="total-harga">Rp0</span></p>
+
+    <form id="form-pesan">
+      <label>Nama:</label><br/>
+      <input type="text" id="nama-pemesan" required><br/>
+
+      <label>Email (@gmail.com):</label><br/>
+      <input type="text" id="email-pemesan" required><br/>
+
+      <label>Alamat:</label><br/>
+      <textarea id="alamat-pemesan" required></textarea><br/>
+
+      <label>Add-ons (opsional):</label><br/>
+      <input type="text" id="addons"><br/>
+
+      <label>Metode Pembayaran:</label><br/>
+      <select id="metode">
+        <option value="cash">Cash</option>
+        <option value="gopay">GoPay</option>
+        <option value="ovo">OVO</option>
+      </select><br/>
+
+
+<div>
+  <label><input type="radio" name="pengiriman" value="antar"> Antar</label><br>
+  <label><input type="radio" name="pengiriman" value="ambil"> Ambil</label>
+</div>
+
+      <label>
+        <input type="checkbox" id="setuju"> Saya setuju dengan syarat dan ketentuan
+      </label><br/>
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+    <div id="hasil-pesan"></div>
+  </section>
+
+
+  <footer>
+    <p>@ 2025 MR.COFFEE ALL RIGHTS RESERVED</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
